@@ -1,0 +1,1 @@
+// Content for system-monitor.js
