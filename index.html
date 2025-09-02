@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AddFunction - Welcome</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AddFunction - Innovative solutions and tools for the modern world. Building the future, one function at a time.">
+    <meta name="keywords" content="AddFunction, innovation, technology, development, solutions, tools">
+    <meta name="author" content="AddFunction">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emdr.dev/">
+    <meta property="og:title" content="AddFunction - Welcome">
+    <meta property="og:description" content="Innovative solutions and tools for the modern world. Building the future, one function at a time.">
+    <meta property="og:image" content="https://emdr.dev/favicon.ico">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://emdr.dev/">
+    <meta property="twitter:title" content="AddFunction - Welcome">
+    <meta property="twitter:description" content="Innovative solutions and tools for the modern world. Building the future, one function at a time.">
+    <meta property="twitter:image" content="https://emdr.dev/favicon.ico">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
     <style>
         * {
             margin: 0;
@@ -17,9 +41,92 @@
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 20px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Clock and Date */
+        .clock-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .clock {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
         }
 
         .container {
@@ -132,6 +239,90 @@
             font-size: 0.95rem;
         }
 
+        /* Projects Section */
+        .projects-section {
+            margin: 50px 0;
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+
+        .projects-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .project-card {
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(102, 126, 234, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            font-size: 0.8rem;
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+            padding: 4px 8px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #764ba2;
+        }
+
         .cta-button {
             display: inline-block;
             padding: 15px 40px;
@@ -158,7 +349,27 @@
             font-size: 0.9rem;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .clock-container {
+                top: 15px;
+                left: 15px;
+                padding: 10px;
+                min-width: 100px;
+            }
+            
+            .clock {
+                font-size: 1.2rem;
+            }
+            
+            main {
+                padding-top: 80px;
+            }
+
             .container {
                 padding: 40px 25px;
                 width: 95%;
@@ -180,42 +391,296 @@
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+            
+            .projects-title {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* Accessibility improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus styles for accessibility */
+        a:focus, button:focus {
+            outline: 2px solid #667eea;
+            outline-offset: 2px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">AF</div>
-        <h1>AddFunction</h1>
-        <div class="subtitle">Welcome to Our Digital Space</div>
-        <div class="description">
-            We're passionate about creating innovative solutions and building tools that make a difference. 
-            This is our home base where ideas come to life and functionality meets creativity.
+    <!-- Navigation Bar -->
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo" aria-label="AddFunction Logo">AddFunction</div>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#home" role="menuitem">Home</a></li>
+                <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="https://github.com/Addfunction" role="menuitem" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
         </div>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🚀</div>
-                <h3>Innovation</h3>
-                <p>Cutting-edge solutions designed for the modern world</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">⚡</div>
-                <h3>Performance</h3>
-                <p>Fast, reliable, and efficient tools you can depend on</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🎯</div>
-                <h3>Precision</h3>
-                <p>Carefully crafted with attention to every detail</p>
-            </div>
-        </div>
+    </nav>
 
-        <a href="#" class="cta-button">Get Started</a>
+    <!-- Clock and Date -->
+    <div class="clock-container" role="complementary" aria-label="Current time and date">
+        <div class="clock" id="clock" aria-live="polite">--:--:--</div>
+        <div class="date" id="date" aria-live="polite">--- -- ----</div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="home" role="main">
+        <div class="container">
+            <div class="logo" aria-label="AddFunction Logo Circle">AF</div>
+            <h1>AddFunction</h1>
+            <div class="subtitle">Welcome to Our Digital Space</div>
+            <div class="description">
+                We're passionate about creating innovative solutions and building tools that make a difference. 
+                This is our home base where ideas come to life and functionality meets creativity.
+            </div>
+            
+            <section class="features" aria-label="Our key features">
+                <div class="feature">
+                    <div class="feature-icon" aria-hidden="true">🚀</div>
+                    <h3>Innovation</h3>
+                    <p>Cutting-edge solutions designed for the modern world</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon" aria-hidden="true">⚡</div>
+                    <h3>Performance</h3>
+                    <p>Fast, reliable, and efficient tools you can depend on</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon" aria-hidden="true">🎯</div>
+                    <h3>Precision</h3>
+                    <p>Carefully crafted with attention to every detail</p>
+                </div>
+            </section>
+
+            <a href="#projects" class="cta-button" role="button">Explore Projects</a>
+        </div>
+    </main>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section" role="region" aria-label="Our projects and repositories">
+        <h2 class="projects-title">Our Projects</h2>
+        <p class="projects-subtitle">Explore our latest creations and open-source contributions</p>
         
+        <div class="projects-grid">
+            <article class="project-card">
+                <h3 class="project-title">AddFuture</h3>
+                <span class="project-tech">TypeScript</span>
+                <p class="project-description">
+                    A future-focused productivity application designed to help you plan and organize your goals with cutting-edge technology.
+                </p>
+                <a href="https://github.com/Addfunction/AddFuture" class="project-link" target="_blank" rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+            </article>
+            
+            <article class="project-card">
+                <h3 class="project-title">Sandbox Site</h3>
+                <span class="project-tech">JavaScript</span>
+                <p class="project-description">
+                    Development sandbox and experimental playground for testing new ideas and prototyping innovative solutions.
+                </p>
+                <a href="https://github.com/Addfunction/sandbox_site" class="project-link" target="_blank" rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+            </article>
+            
+            <article class="project-card">
+                <h3 class="project-title">PairShare</h3>
+                <span class="project-tech">Web App</span>
+                <p class="project-description">
+                    A couples communication app that brings partners together by providing a beautiful way to share thoughts and feelings.
+                </p>
+                <a href="https://github.com/Addfunction/PairShare" class="project-link" target="_blank" rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+            </article>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://github.com/Addfunction" class="cta-button" target="_blank" rel="noopener noreferrer">
+                View All Repositories
+            </a>
+        </div>
+    </section>
+
+    <footer role="contentinfo">
         <div class="footer">
             © 2024 AddFunction. Building the future, one function at a time.
         </div>
-    </div>
+    </footer>
+
+    <!-- JavaScript for functionality and error handling -->
+    <script>
+        // Error handling and monitoring
+        window.addEventListener('error', function(e) {
+            console.error('Global error caught:', e.error);
+            // In a real application, you might want to send this to a logging service
+            if (typeof logError === 'function') {
+                logError(e.error);
+            }
+        });
+
+        window.addEventListener('unhandledrejection', function(e) {
+            console.error('Unhandled promise rejection:', e.reason);
+            // In a real application, you might want to send this to a logging service
+            if (typeof logError === 'function') {
+                logError(e.reason);
+            }
+        });
+
+        // Clock and Date functionality
+        function updateClock() {
+            try {
+                const now = new Date();
+                
+                // Format time
+                const timeOptions = {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false
+                };
+                const timeString = now.toLocaleTimeString('en-US', timeOptions);
+                
+                // Format date
+                const dateOptions = {
+                    weekday: 'short',
+                    month: 'short',
+                    day: 'numeric'
+                };
+                const dateString = now.toLocaleDateString('en-US', dateOptions);
+                
+                // Update DOM elements
+                const clockElement = document.getElementById('clock');
+                const dateElement = document.getElementById('date');
+                
+                if (clockElement) clockElement.textContent = timeString;
+                if (dateElement) dateElement.textContent = dateString;
+                
+            } catch (error) {
+                console.error('Error updating clock:', error);
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        function initSmoothScrolling() {
+            try {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            } catch (error) {
+                console.error('Error initializing smooth scrolling:', error);
+            }
+        }
+
+        // Accessibility improvements
+        function initAccessibility() {
+            try {
+                // Add keyboard navigation for mobile menu toggle
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        // Close any open modals or dropdowns
+                        const activeElement = document.activeElement;
+                        if (activeElement && activeElement.blur) {
+                            activeElement.blur();
+                        }
+                    }
+                });
+
+                // Improve focus management
+                const focusableElements = document.querySelectorAll(
+                    'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+                );
+                
+                focusableElements.forEach(element => {
+                    element.addEventListener('focus', function() {
+                        this.setAttribute('data-focused', 'true');
+                    });
+                    
+                    element.addEventListener('blur', function() {
+                        this.removeAttribute('data-focused');
+                    });
+                });
+            } catch (error) {
+                console.error('Error initializing accessibility features:', error);
+            }
+        }
+
+        // Performance monitoring
+        function logPerformanceMetrics() {
+            try {
+                if ('performance' in window) {
+                    window.addEventListener('load', function() {
+                        setTimeout(function() {
+                            const perfData = performance.getEntriesByType('navigation')[0];
+                            if (perfData) {
+                                console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                                console.log('DOM content loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+                            }
+                        }, 100);
+                    });
+                }
+            } catch (error) {
+                console.error('Error logging performance metrics:', error);
+            }
+        }
+
+        // Initialize everything when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                updateClock();
+                setInterval(updateClock, 1000); // Update clock every second
+                initSmoothScrolling();
+                initAccessibility();
+                logPerformanceMetrics();
+                
+                console.log('AddFunction landing page initialized successfully');
+            } catch (error) {
+                console.error('Error during initialization:', error);
+            }
+        });
+
+        // Service Worker registration for PWA capabilities (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                // Uncomment the next lines if you want to register a service worker
+                // navigator.serviceWorker.register('/sw.js')
+                //     .then(function(registration) {
+                //         console.log('ServiceWorker registration successful');
+                //     })
+                //     .catch(function(err) {
+                //         console.log('ServiceWorker registration failed: ', err);
+                //     });
+            });
+        }
+    </script>
 </body>
 </html>
